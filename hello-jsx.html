@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+<body>
+
+    <div id="mydiv"></div>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // ********** Basic *******************
+        class Hello extends React.Component {
+            render() {
+                return <h1>Hello World KP!</h1>
+            }
+        }
+
+        ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+
+        // *************** JSX **************************
+        function formatName(user) {
+            return user.firstName + ' ' + user.lastName;
+        }
+
+        const user = {
+            firstName: 'Harper',
+            lastName: 'Perez'
+        };
+
+        const element = (
+            <h1>
+                Hello, {formatName(user)}!  </h1>
+        );
+
+        ReactDOM.render(
+            element,
+            document.getElementById('root')
+        );
+
+        // *** Rendering Elements ** 
+        function tick() {
+            const element = (
+                <div>
+                    <h1>Hello, world!</h1>
+                    <h2>It is {new Date().toLocaleTimeString()}.</h2>
+                </div>
+            );
+            ReactDOM.render(element, document.getElementById('root'));
+        }
+        setInterval(tick, 1000);
+
+
+        
+    </script>
+</body>
+
+</html>
+
+<!-- https://www.w3schools.com/react/react_getstarted.asp -->
+<!-- https://reactjs.org/docs/hello-world.html -->
