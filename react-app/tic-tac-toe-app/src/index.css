@@ -49,3 +49,9 @@ body {
     margin-left: 20px;
   }
   
+  .resetButton
+  {
+    background-color: red;
+    color:white;
+    
+  }
