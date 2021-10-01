@@ -83,7 +83,7 @@ function Square(props) {
 
     resetGame(){
 
-      var result = window.confirm("Are you sure you want to reset game?");
+      var result = window.confirm("Are you 100% sure you want to reset game?");
       if(result)
       {
         this.setState({
